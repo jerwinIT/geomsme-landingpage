@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoMSME - Empowering SMEs with Smart Location Insights</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <!-- Include Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img
+          src="Images/GeoMSME - Horizontal Logo - 300 x 60 px.png"
+          alt="GeoMSME Logo"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#" class="button-18">Login</a></li>
+        <li><a href="#" class="button-18">Register</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div id="map"></div>
+      <div class="hero-content">
+        <h1>Empowering SMEs with Smart Location Insights</h1>
+        <p>
+          Discover, Analyze, and Grow Your Business with GIS-Powered Insights in
+          Batangas.
+        </p>
+        <a href="#" class="cta-button">Explore SMEs</a>
+        <a href="#" class="cta-button">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features">
+      <h2>Why GeoMSME?</h2>
+      <div class="feature-list">
+        <div class="feature">
+          <h3>📍 SME-Centric Business Directory</h3>
+          <p>Find local businesses in Batangas.</p>
+        </div>
+        <div class="feature">
+          <h3>📊 GIS-Based Business Insights</h3>
+          <p>Analyze business data with real-time maps.</p>
+        </div>
+        <div class="feature">
+          <h3>🔎 Smart Search & Filtering</h3>
+          <p>
+            Easily locate businesses based on category, location, and services.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>📈 Location Analytics & Market Trends</h3>
+          <p>Make data-driven decisions for business growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>1️⃣ Search for SMEs</h3>
+          <p>Find businesses in Batangas with advanced filters.</p>
+        </div>
+        <div class="step">
+          <h3>2️⃣ Analyze Business Insights</h3>
+          <p>View heatmaps, competitor distribution, and market trends.</p>
+        </div>
+        <div class="step">
+          <h3>3️⃣ Connect & Grow</h3>
+          <p>Engage with SMEs, investors, and policymakers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta">
+      <h2>Ready to Get Started?</h2>
+      <p>Join GeoMSME and explore business insights today.</p>
+      <a href="#signup" class="cta-button">Get Started for Free</a>
+      <a href="#join" class="cta-button secondary">Join GeoMSME Now</a>
+    </section>
+
+    <!--About us Section-->
+    <section class="about-us">
+      <div class="about-us-container">
+        <div class="about-us-text">
+          <h2>About Us</h2>
+          <p>
+            We are a team of third-year BS Information Technology students
+            conducting this capstone project. Our focus for the third year is
+            documentation, while in our fourth year, we will develop and deploy
+            the project, followed by a year of testing. Our goal is to create an
+            innovative system that empowers SMEs with smart location insights.
+          </p>
+        </div>
+        <div class="about-us-image">
+          <img
+            src="https://i.ibb.co/ycW06vrc/Geo-MSME-Team.jpg"
+            alt="Geo MSME Team"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section class="team-section">
+      <h3>Meet Our Team</h3>
+      <div class="team-members">
+        <div class="member">
+          <img src="Images/Jerwin.png" alt="Jerwin Louise Peria" />
+          <h4>Jerwin Louise Peria</h4>
+          <p>Lead Developer & System Architect</p>
+        </div>
+        <div class="member">
+          <img src="Images/Jerwin.png" alt="Gea Cuevas" />
+          <h4>Gea Cuevas</h4>
+          <p>UI/UX Designer & Documentation Specialist</p>
+        </div>
+        <div class="member">
+          <img src="Images/Jerwin.png" alt="Riana Herlaine Carandang" />
+          <h4>Riana Herlaine Carandang</h4>
+          <p>Project Manager & Business Analyst</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+
+        <!-- Social Media Icons -->
+        <ul class="footer-socials">
+          <li>
+            <a href="https://facebook.com" target="_blank">
+              <i class="fab fa-facebook-f icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contact@geomsme.com">
+              <i class="fab fa-google icon"></i>
+            </a>
+          </li>
+        </ul>
+
+        <p class="footer-text">© 2025 GeoMSME. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
