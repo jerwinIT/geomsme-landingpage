@@ -54,10 +54,13 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
   margin: 0 15px;
+  position: relative;
 }
 
 .nav-links a {
@@ -67,45 +70,30 @@ body {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   transition: 0.3s ease-in-out;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--deep-red); /* Match hover color */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
 }
 
 .nav-links a:hover {
   color: var(--deep-red); /* Red hover effect */
-}
-
-/* Button Styling for Login and Register */
-.login-btn,
-.register-btn {
-  padding: 10px 20px;
-  border: 2px solid #a4161a;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out; /* Animation for hover effect */
-}
-
-/* Login Button Styles */
-.login-btn {
-  background-color: #e5383b;
-  color: white;
-}
-
-.login-btn:hover {
-  background-color: #660708;
-  color: white;
-  transform: scale(1.05); /* Hover animation */
-}
-
-/* Register Button Styles */
-.register-btn {
-  background-color: #ffffff;
-  color: #161a1d;
-}
-
-.register-btn:hover {
-  background-color: #a4161a;
-  color: white;
-  transform: scale(1.05); /* Hover animation */
 }
 
 /* Mobile Navigation */
@@ -128,6 +116,54 @@ body {
   color: var(--white);
   position: relative;
   z-index: 2; /* Ensures the text is above the map */
+}
+/* Hero CTA Button */
+.hero-cta-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ba181b; /* Red from your palette */
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0; /* Square corners */
+  text-decoration: none;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hero-cta-button svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: transparent; /* Invisible initially */
+  stroke-width: 2;
+  stroke-dasharray: 320; /* Adjusted to match button size */
+  stroke-dashoffset: 320; /* Adjusted to match button size */
+  transition: stroke-dashoffset 1s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.hero-cta-button:hover svg {
+  stroke: #4f95da; /* Visible on hover */
+  stroke-dashoffset: 0;
+}
+
+.hero-cta-button span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+.hero-cta-button:hover {
+  background-color: #a31617; /* Darker shade on hover */
+  box-shadow: 0px 5px 15px rgba(186, 24, 27, 0.4);
+}
+
+.hero-cta-button:hover span {
+  color: #ffffff;
 }
 
 /* Map as Background */
